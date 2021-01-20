@@ -1,0 +1,132 @@
+.support {
+	background-color: $gray-100;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+
+	.description {
+		max-width: 447px;
+
+		.super-title {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 22px;
+			line-height: 25px;
+			color: $black;
+			margin-bottom: 1rem;
+		}
+		.title {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 2.125rem;
+			line-height: 46px;
+			margin-bottom: 1.1875rem;
+			color: $black;
+		}
+		.text {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 1.875;
+			color: $black;
+			margin-bottom: 2.6718rem;
+		}
+	}
+	.two-columns {
+		display: flex;
+		flex-direction: column;
+
+		@include for-size(tablet-landscape-up) {
+			flex-direction: row;
+		}
+	}
+	.col {
+		&-left,
+		&-right {
+			@include for-size(tablet-landscape-up) {
+				width: 50%;
+			}
+		}
+		&-left {
+		}
+		&-right {
+		}
+	}
+	.bg-card {
+		position: relative;
+		width: 250px;
+		height: 250px;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		@include for-size(tablet-landscape-up) {
+			width: 455px;
+			height: 455px;
+		}
+
+		.super-title {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 25px;
+			color: $white;
+			margin-left: 2rem;
+			margin-bottom: 0.5rem;
+		}
+		.title {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 1.5rem;
+			line-height: 36px;
+			margin-left: 2rem;
+			margin-bottom: 2rem;
+			color: $white;
+		}
+
+		.bg-image {
+			position: absolute;
+			bottom: 0;
+			background-position: bottom center;
+			z-index: -1;
+			transform: scaleX(-1);
+			background-size: contain;
+
+			@include for-size(tablet-landscape-up) {
+				left: 0;
+			}
+		}
+	}
+
+	.button-block {
+		display: flex;
+		justify-content: center;
+		margin-top: 2rem;
+
+		@include for-size(tablet-landscape-up) {
+			margin-top: 7rem;
+		}
+	}
+	.button {
+		cursor: pointer;
+		border: none;
+		font-size: 1rem;
+		font-weight: 600;
+		color: $white;
+		padding: 24px 32px;
+		margin: 2rem auto 2rem 0;
+		background-color: $black;
+		transition: opactiy 0.3s ease-out;
+
+		@include for-size(tablet-landscape-up) {
+			margin: 2rem auto;
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}

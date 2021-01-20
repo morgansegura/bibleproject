@@ -1,0 +1,172 @@
+.bible-studies {
+	background-color: $white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+
+	.description {
+		max-width: 447px;
+
+		.super-title {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 1.5rem;
+			line-height: 25px;
+			color: $black;
+			margin-bottom: 1rem;
+		}
+		.text-label {
+			font-weight: 300;
+			font-size: 0.8rem;
+			line-height: 25px;
+			color: $black;
+			margin-bottom: 0.5rem;
+			span {
+				font-weight: 700;
+			}
+		}
+		.title {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 2.125rem;
+			line-height: 46px;
+			margin-bottom: 2.25rem;
+			color: $black;
+		}
+		.text {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 1.25rem;
+			line-height: 1.875;
+			color: $black;
+			margin-bottom: 2rem;
+
+			a {
+				margin-left: 1.25rem;
+				text-decoration: none;
+				color: $bp-blue;
+				transition: all 0.3s ease-out;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.two-columns {
+		display: flex;
+		flex-direction: column;
+
+		@include for-size(tablet-landscape-up) {
+			flex-direction: row;
+		}
+	}
+	.col {
+		&-left,
+		&-right {
+			@include for-size(tablet-landscape-up) {
+				width: 50%;
+			}
+		}
+		&-left {
+		}
+		&-right {
+		}
+	}
+	.bg-card {
+		position: relative;
+		width: 455px;
+		height: 455px;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		.super-title {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 25px;
+			color: $white;
+			margin-left: 2rem;
+			margin-bottom: 0.5rem;
+		}
+		.title {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 1.5rem;
+			line-height: 36px;
+			margin-left: 2rem;
+			margin-bottom: 2rem;
+			color: $white;
+		}
+
+		.bg-image {
+			position: absolute;
+			bottom: 0;
+			z-index: -1;
+			transform: scaleX(-1);
+			background-size: contain;
+		}
+	}
+	.contain {
+		background-size: contain;
+		background-position: 100% 100%;
+	}
+	.button-block {
+		display: flex;
+		justify-content: center;
+	}
+	.button {
+		cursor: pointer;
+		border: none;
+		font-size: 1rem;
+		font-weight: 600;
+		color: $white;
+		padding: 24px 32px;
+		margin: 2rem auto 2rem 0;
+		background-color: $black;
+		transition: opactiy 0.3s ease-out;
+
+		i {
+			transform: rotate(45deg);
+			font-size: 1.25rem;
+			margin-left: 1rem;
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	.blog-list {
+		max-width: 447px;
+	}
+	.blog-item {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		border-bottom: 1px solid #d8d8d8;
+		&:last-child {
+			border-color: transparent;
+		}
+
+		.title {
+			font-weight: 700;
+			font-size: 22px;
+			line-height: 38px;
+			padding-bottom: 1rem;
+		}
+		.text-label {
+			font-weight: 300;
+			font-size: 0.9rem;
+			line-height: 25px;
+			color: $black;
+			margin-bottom: 0.5rem;
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+}

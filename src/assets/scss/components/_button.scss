@@ -1,0 +1,13 @@
+.button {
+	&--reset {
+		outline: none;
+		border: none;
+	}
+	.form__button {
+		border: none;
+	}
+	&--white {
+		background-color: white;
+		color: #010101;
+	}
+}

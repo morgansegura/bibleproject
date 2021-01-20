@@ -1,0 +1,123 @@
+.podcasts {
+	background-color: #006683;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+
+	.description {
+		max-width: 447px;
+
+		.super-title {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 1.5rem;
+			line-height: 25px;
+			color: $white;
+			margin-bottom: 1rem;
+		}
+		.title {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 2.125rem;
+			line-height: 46px;
+			margin-bottom: 1.1875rem;
+			color: $white;
+		}
+		.text {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 1.25rem;
+			line-height: 1.875;
+			color: $white;
+			margin-bottom: 2.6718rem;
+		}
+	}
+	.two-columns {
+		display: flex;
+		flex-direction: column;
+
+		@include for-size(tablet-landscape-up) {
+			flex-direction: row;
+		}
+	}
+	.col {
+		&-left,
+		&-right {
+			@include for-size(tablet-landscape-up) {
+				width: 50%;
+			}
+		}
+		&-left {
+		}
+		&-right {
+		}
+	}
+	.bg-card {
+		position: relative;
+		width: 455px;
+		height: 455px;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		.super-title {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 25px;
+			color: $white;
+			margin-left: 2rem;
+			margin-bottom: 0.5rem;
+		}
+		.title {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 1.5rem;
+			line-height: 36px;
+			margin-left: 2rem;
+			margin-bottom: 2rem;
+			color: $white;
+		}
+
+		.bg-image {
+			position: absolute;
+			bottom: 0;
+			z-index: -1;
+			transform: scaleX(-1);
+			background-size: contain;
+		}
+	}
+	.contain {
+		background-size: contain;
+		background-position: 100% 100%;
+	}
+	.button-block {
+		display: flex;
+		justify-content: center;
+		margin-top: 1rem;
+
+		@include for-size(tablet-landscape-up) {
+			margin-top: 7rem;
+		}
+	}
+	.button {
+		cursor: pointer;
+		border: none;
+		font-size: 1rem;
+		font-weight: 600;
+		color: $white;
+		padding: 24px 32px;
+		margin: 2rem auto;
+		background-color: $black;
+		transition: opactiy 0.3s ease-out;
+		@include for-size(tablet-landscape-up) {
+			margin: 2rem auto 2rem 0;
+		}
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}

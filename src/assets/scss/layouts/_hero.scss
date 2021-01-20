@@ -1,0 +1,143 @@
+.hero {
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	margin: 0 atuo;
+	min-height: 50vh;
+
+	.description {
+		max-width: 447px;
+
+		.super-title {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 1.5rem;
+			line-height: 25px;
+			color: $white;
+			margin-bottom: 1rem;
+		}
+		.title {
+			display: flex;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 1.85rem;
+			line-height: 46px;
+			color: $white;
+		}
+		.text {
+			font-style: normal;
+			font-weight: 300;
+			font-size: 1.25rem;
+			line-height: 1.875;
+			color: $white;
+			margin-bottom: 2.6718rem;
+		}
+	}
+	.two-columns {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+
+		@include for-size(tablet-landscape-up) {
+			flex-direction: row;
+		}
+	}
+	.col {
+		&-left,
+		&-right {
+			position: relative;
+
+			@include for-size(tablet-landscape-up) {
+				width: 50%;
+			}
+		}
+		&-left {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			box-sizing: border-box;
+			z-index: 2;
+			padding-top: 6rem;
+			padding-bottom: 4rem;
+			padding-left: 10%;
+			padding-right: 10%;
+			background-color: $brown;
+
+			@include for-size(tablet-landscape-up) {
+				width: 50%;
+			}
+		}
+		&-right {
+			background-color: $tan;
+			overflow: hidden;
+		}
+	}
+	.bg-image-container {
+		position: relative;
+		margin-top: 6rem;
+		width: 100%;
+		height: 100%;
+		display: none;
+
+		@include for-size(tablet-landscape-up) {
+			display: block;
+		}
+	}
+	.bg-image {
+		width: 100%;
+		height: 100%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom center;
+	}
+
+	&__full__with-image {
+		margin-top: 4rem;
+		padding-left: 10%;
+		padding-right: 10%;
+		border-radius: 6px;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		display: flex;
+		align-items: center;
+
+		@include for-size(tablet-landscape-up) {
+			padding-left: 5.0625rem;
+		}
+
+		.description {
+			padding-top: 10%;
+			padding-bottom: 10%;
+		}
+		.button {
+			font-size: 1rem;
+			font-weight: 600;
+			color: #010101;
+			padding: 18px 24px;
+		}
+	}
+
+	.form__email {
+		display: flex;
+		input {
+			flex: 10 auto;
+			border: 2px solid white;
+			min-width: 210px;
+			padding: 20px 16.75px;
+			background-color: transparent;
+			margin-right: 0.5rem;
+			font-size: 17px;
+
+			&::placeholder {
+				color: rgba(255, 255, 255, 0.7);
+			}
+		}
+		.button {
+			font-size: 1rem;
+			font-weight: 600;
+			color: #010101;
+			padding: 18px 24px;
+		}
+	}
+}

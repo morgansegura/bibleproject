@@ -1,0 +1,23 @@
+// Font Family
+$base: 'Graphik', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Colors
+$bp-blue: #00b3e5;
+$white: white;
+$black: #010101;
+$brown: #815e45;
+$tan: #d59c73;
+$violet: #9a53cb;
+$indigo: #514f85;
+$hunter: #1d2d30;
+$cornflower: #6072b1;
+$cranberry: #722e4d;
+$deeporange: #a96922;
+
+$gray-100: #f2f2f2;
+
+// Gradients
+$grad-violet-purple: linear-gradient(0deg, #815caa, #815caa), #9a53cb;
+$grad-orange-brown: linear-gradient(0deg, #a96922, #a96922);
+$grad-trans-black: linear-gradient(90deg, #010101 50%, rgba(1, 1, 1, 0) 66.12%);
+$grad-trans-teal: linear-gradient(0deg, #006683, #006683), #356071;
